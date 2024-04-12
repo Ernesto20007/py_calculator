@@ -1,15 +1,43 @@
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="en">
-<head>
+  <head>
+    <title>PyScript Next</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@pyscript/core/dist/core.css">
-    <script type="module" src="https://cdn.jsdelivr.net/npm/@pyscript/core"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@pyscript/core"></script> 
+
     <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  </head>
+  <body>
+    <form>
+      <div class="sor">
+      <input type="text" id="szam1">
+      <select name="" id="muvelet">
+        <option value="osszeadas">+</option>
+        <option value="kivonas">-</option>
+        <option value="szorzas">*</option>
+        <option value="osztas">/</option>
+      </select>
+      <input type="text" id="szam2">
+
+    </div>
+
+    <div class="gombok">
+      <button id="torles" py-click="torol">C</button>
+      <button id="egyenlo" py-click="szamit">=</button>
+
+
+    </div>
+
+    <div class="eredmenysor">
+      <p id="eredmeny">0</p>
+
+    </div>
+
+    </form>
 
     <py-script src="main.py"></py-script>
-</body>
+  </body>
 </html>
